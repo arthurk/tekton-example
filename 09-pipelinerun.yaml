@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: test-build-push-pr
+spec:
+  serviceAccountName: build-bot
+  pipelineRef:
+    name: test-build-push
+  resources:
+  - name: repo
+    resourceRef:
+      name: arthurk-tekton-example
