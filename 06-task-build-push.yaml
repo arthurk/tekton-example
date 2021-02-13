@@ -9,7 +9,7 @@ spec:
         type: git
   steps:
     - name: build-and-push
-      image: gcr.io/kaniko-project/executor:v0.19.0
+      image: gcr.io/kaniko-project/executor:v1.3.0
       env:
         - name: DOCKER_CONFIG
           value: /tekton/home/.docker
